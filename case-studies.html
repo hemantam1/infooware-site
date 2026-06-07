@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Selected case studies from Infooware — real engagements, real outcomes, across FMCG, Healthcare, Agriculture, Manufacturing, Education and Hospitality.">
+<title>Case Studies · Infooware Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="index.html">
+      <img src="assets/logo.png" alt="Infooware">
+      <span class="topbar-brand-text">
+        <span class="name">Infooware</span>
+        <span class="tag">Services</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="industries.html">Industries</a><a href="case-studies.html" class="active">Case Studies</a><a href="methodology.html">Methodology</a><a href="about.html">About</a><a href="contact.html">Contact</a></nav>
+    <a class="topbar-cta" href="contact.html">Book Discovery Call</a>
+  </div>
+</header>
+
+<style>
+/* ========== CASE STUDIES PAGE-SPECIFIC ========== */
+.case-hero-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 40px; margin-top: 56px;
+  padding-top: 36px; border-top: 1px solid var(--line);
+}
+.case-hero-stats strong {
+  font-family: 'Fraunces', serif;
+  font-size: 44px; font-weight: 500;
+  color: var(--teal-deep); line-height: 1;
+  letter-spacing: -0.02em;
+  display: block;
+}
+.case-hero-stats span {
+  font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.16em; color: var(--muted);
+  margin-top: 10px; display: block;
+}
+
+.filter-row {
+  display: flex; gap: 8px; flex-wrap: wrap;
+  padding: 16px 0; margin-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.filter-chip {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--cream-light);
+  color: var(--ink-soft);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  transition: all 0.2s ease;
+}
+.filter-chip:hover {
+  background: var(--teal); color: var(--cream-light);
+  border-color: var(--teal);
+}
+
+.case-study {
+  padding: 72px 0;
+  border-top: 1px solid var(--line-strong);
+  scroll-margin-top: 80px;
+}
+.case-study:first-of-type { border-top: none; }
+
+.case-study-header {
+  position: relative;
+  margin-bottom: 48px;
+}
+.case-tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+.case-num {
+  position: absolute; top: 0; right: 0;
+  font-size: 96px; font-weight: 200;
+  color: var(--cream-dark);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+}
+.case-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.15;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  max-width: 880px;
+  margin-bottom: 20px;
+}
+.case-lede {
+  font-size: 19px; line-height: 1.55;
+  color: var(--ink-soft);
+  max-width: 760px;
+  margin-bottom: 32px;
+}
+.case-client {
+  display: inline-block;
+  padding: 16px 24px;
+  background: var(--cream-light);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+}
+.case-client-label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.case-client-name {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--teal-deep);
+}
+.case-client-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+.case-section { margin-bottom: 48px; }
+.case-section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--teal-deep);
+  margin-bottom: 16px;
+  display: flex; align-items: baseline; gap: 12px;
+}
+.case-section-title .num {
+  font-size: 13px;
+  color: var(--gold);
+  letter-spacing: 0.1em;
+  font-weight: 600;
+}
+.case-list {
+  list-style: none; padding: 0;
+}
+.case-list li {
+  padding: 10px 0 10px 22px;
+  position: relative;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+}
+.case-list li:first-child { border-top: none; }
+.case-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 19px;
+  width: 8px; height: 8px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+.case-list-solution li::before { background: var(--gold); }
+.case-list-arch li::before {
+  background: transparent;
+  border: 1.5px solid var(--teal-bright);
+  top: 17px;
+}
+
+.case-impact {
+  background: linear-gradient(135deg, var(--teal-deep), var(--teal));
+  color: var(--cream-light);
+  padding: 40px 36px;
+  border-radius: 4px;
+  margin: 48px 0;
+  position: relative;
+  overflow: hidden;
+}
+.case-impact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 100% 0%, rgba(184, 146, 79, 0.25) 0%, transparent 50%);
+  pointer-events: none;
+}
+.case-impact-label {
+  font-size: 11px; font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  margin-bottom: 24px;
+  position: relative;
+}
+.case-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  position: relative;
+}
+.impact-metric { border-left: 1px solid rgba(244, 236, 216, 0.18); padding-left: 24px; }
+.impact-metric:first-child { border-left: none; padding-left: 0; }
+.impact-num {
+  font-family: 'Fraunces', serif;
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: var(--cream-light);
+}
+.impact-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.impact-desc {
+  font-size: 12px;
+  color: rgba(244, 236, 216, 0.75);
+  line-height: 1.45;
+}
+
+.case-tech { margin-bottom: 40px; }
+.case-tech-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+.case-tech-chips {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.tech-chip {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: var(--cream-light);
+  color: var(--teal-deep);
+  border: 1px solid var(--line);
+  letter-spacing: 0.02em;
+}
+
+.case-quote {
+  margin: 48px 0;
+  padding: 36px 40px;
+  background: var(--cream-light);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  position: relative;
+}
+.case-quote-mark {
+  position: absolute;
+  top: 8px; left: 24px;
+  font-size: 72px;
+  color: var(--gold);
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.3;
+}
+.case-quote-text {
+  font-family: 'Fraunces', serif;
+  font-size: 21px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  position: relative;
+  padding-left: 32px;
+}
+.case-quote-footer {
+  margin-top: 18px;
+  padding-left: 32px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--teal-deep);
+  text-transform: uppercase;
+}
+
+.case-cta {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 32px;
+}
+
+@media (max-width: 980px) {
+  .case-grid { grid-template-columns: 1fr; gap: 32px; }
+  .case-impact-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .impact-metric { border-left: none; padding-left: 0; padding-top: 20px; border-top: 1px solid rgba(244, 236, 216, 0.18); }
+  .impact-metric:nth-child(-n+2) { border-top: none; padding-top: 0; }
+  .case-hero-stats { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+  .case-num { font-size: 64px; }
+}
+@media (max-width: 540px) {
+  .case-impact-grid { grid-template-columns: 1fr; }
+  .impact-metric { border-top: 1px solid rgba(244, 236, 216, 0.18) !important; padding-top: 20px !important; }
+  .impact-metric:first-child { border-top: none !important; padding-top: 0 !important; }
+  .case-quote { padding: 28px 24px; }
+  .case-quote-text { font-size: 18px; padding-left: 0; }
+  .case-quote-mark { display: none; }
+  .case-quote-footer { padding-left: 0; }
+}
+</style>
+
+<main>
+  <section class="hero">
+    <div class="reveal">
+      <div class="eyebrow">Selected Engagements</div>
+      <h1 class="display">
+        Real <em>problems.</em><br>
+        Real <strong>outcomes.</strong>
+      </h1>
+      <p class="lead">
+        Six case studies drawn from our work across FMCG, Healthcare, Agriculture, Manufacturing,
+        Education and Hospitality — with the architecture, technology choices, and business impact
+        that matter. Client names anonymized per NDA where applicable.
+      </p>
+      <div class="case-hero-stats">
+        <div><strong>500+</strong><span>Projects Delivered</span></div>
+        <div><strong>100+</strong><span>Global Clients</span></div>
+        <div><strong>15+</strong><span>Years Operating</span></div>
+        <div><strong>6</strong><span>Continents Reached</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 24px;">
+    <div class="section-inner">
+      <div class="filter-row reveal">
+        <span style="font-size: 11px; font-weight: 700; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; padding: 10px 4px;">Browse by industry:</span>
+        <a href="#" class="filter-chip" data-filter="agritech">AgriTech</a><a href="#" class="filter-chip" data-filter="education">Education</a><a href="#" class="filter-chip" data-filter="fmcg">FMCG</a><a href="#" class="filter-chip" data-filter="healthcare">Healthcare</a><a href="#" class="filter-chip" data-filter="hospitality">Hospitality</a><a href="#" class="filter-chip" data-filter="manufacturing">Manufacturing</a>
+      </div>
+      
+<article class="case-study reveal" id="fmcg-field-sales-india">
+  <div class="case-study-header">
+    <div class="case-tag" style="background: var(--teal); color: var(--cream-light);">FMCG · India</div>
+    <div class="case-num serif">01</div>
+    <h2 class="case-title">Rebuilding Secondary Sales for a National FMCG Distributor</h2>
+    <p class="case-lede">How a national FMCG distributor moved from end-of-day paper reconciliation to live secondary-sales visibility across 320 reps in six weeks — and lifted productivity 5X.</p>
+    <div class="case-client">
+      <div class="case-client-label">Client</div>
+      <div class="case-client-name">National FMCG Distributor</div>
+      <div class="case-client-desc">Pan-India distributor covering 14,000+ retail outlets across 9 states. Anonymous per NDA.</div>
+    </div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">01</span> The Problem</h3>
+      <ul class="case-list"><li>Sales reps were spending 40-60 minutes a day on paper order books and end-of-day data entry. Productive selling hours were eaten by admin.</li><li>Once inventory left the distributor warehouse, the brand had no visibility into what actually moved at retail. Stockouts at outlets coexisted with overstock at distributors.</li><li>Beat plans were drawn 6 months prior and no longer matched reality. Reps cherry-picked easy outlets. Coverage degraded silently. Quarterly targets were missed three quarters in a row.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">02</span> The Solution</h3>
+      <ul class="case-list case-list-solution"><li>Deployed Infooware's <strong>Field Sales Intelligence</strong> platform — order booking mobile app, beat planning engine, distributor dashboard, AI Sales Copilot.</li><li>Onboarded 320 field reps over six weeks. In-person training in 4 regional hubs. Offline-first mobile app meant no signal-dependency in rural beats.</li><li>Integrated with the client's existing SAP ERP and Tally accounting for downstream order processing and reconciliation.</li></ul>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <h3 class="case-section-title"><span class="num">03</span> Architecture</h3>
+    <ul class="case-list case-list-arch"><li>Mobile app: React Native (offline-first), local SQLite cache, syncs on signal</li><li>Backend: Node.js microservices on AWS ECS · Postgres for transactional, Redshift for analytics</li><li>Real-time tracking: WebSocket layer, MQTT-based location pings</li><li>AI Copilot: RAG over product catalog + historical orders, served via OpenAI + custom retrieval</li><li>Integrations: SAP IDoc connector, Tally TCP bridge, WhatsApp Business API for receipts</li></ul>
+  </div>
+
+  <div class="case-impact">
+    <div class="case-impact-label">Business Impact</div>
+    <div class="case-impact-grid">
+        <div class="impact-metric">
+          <div class="impact-num serif">5X</div>
+          <div class="impact-label">Productivity Lift</div>
+          <div class="impact-desc">Per-rep order book size 5× pre-rollout baseline</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">3X</div>
+          <div class="impact-label">Faster Order-to-Cash</div>
+          <div class="impact-desc">Average cycle from order capture to invoice</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">87%</div>
+          <div class="impact-label">Beat Compliance</div>
+          <div class="impact-desc">Up from 41% before the platform</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">6 weeks</div>
+          <div class="impact-label">Onboarding</div>
+          <div class="impact-desc">320 reps onboarded across 9 states</div>
+        </div></div>
+  </div>
+
+  <div class="case-tech">
+    <div class="case-tech-label">Technology Used</div>
+    <div class="case-tech-chips"><span class="tech-chip">React Native</span><span class="tech-chip">Node.js</span><span class="tech-chip">AWS ECS</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Redshift</span><span class="tech-chip">OpenAI</span><span class="tech-chip">SAP IDoc</span><span class="tech-chip">Tally</span><span class="tech-chip">WhatsApp Business API</span></div>
+  </div>
+
+  <blockquote class="case-quote">
+    <div class="case-quote-mark serif">"</div>
+    <p class="case-quote-text">We went from flying blind on secondary sales to having a daily heatmap of outlet performance. Our reps actually carry the platform — they don't tolerate it.</p>
+    <footer class="case-quote-footer">— Sales Operations Director · National FMCG Distributor</footer>
+  </blockquote>
+
+  <div class="case-cta">
+    <a class="btn btn-secondary btn-arrow" href="contact.html">Discuss a similar engagement </a>
+  </div>
+</article>
+
+<article class="case-study reveal" id="healthcare-multispecialty-india">
+  <div class="case-study-header">
+    <div class="case-tag" style="background: var(--teal); color: var(--cream-light);">Healthcare · India</div>
+    <div class="case-num serif">02</div>
+    <h2 class="case-title">Unifying EHR Across a 14-Location Multi-Specialty Hospital Chain</h2>
+    <p class="case-lede">Consolidated patient records, lab integration and compliance reporting across 14 hospital locations — audit-ready in 4 months, with 40% faster record retrieval.</p>
+    <div class="case-client">
+      <div class="case-client-label">Client</div>
+      <div class="case-client-name">Multi-Specialty Hospital Chain</div>
+      <div class="case-client-desc">Mid-sized hospital chain operating 14 facilities across western and southern India. Anonymous per NDA.</div>
+    </div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">01</span> The Problem</h3>
+      <ul class="case-list"><li>Patient records were fragmented across 14 facilities, each running a different EMR vendor. A patient referred from one hospital to another arrived with no usable record continuity.</li><li>Lab and pharmacy systems were standalone — clinicians manually copied results between systems, with a daily reconciliation team chasing mismatches.</li><li>NABH and HIPAA audits were months-long fire drills. The compliance team spent more time preparing audit packages than running the program.</li><li>OPD throughput suffered: average wait time at registration was 22 minutes; billing took another 18 minutes post-consult.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">02</span> The Solution</h3>
+      <ul class="case-list case-list-solution"><li>Deployed Infooware's <strong>Healthcare Platform (ERP)</strong> with unified EHR, integrated billing, pharmacy and lab modules, plus mobile patient and doctor apps.</li><li>Phased rollout: pilot at flagship facility (month 1-2), expansion to 4 additional sites (month 3-4), rollout to remaining 9 (month 5-7).</li><li>Built HL7/FHIR connectors to migrate 1.2M existing patient records. Lab and pharmacy systems integrated via DICOM and proprietary middleware adapters.</li><li>Compliance dashboard tracks HIPAA, NABH and ABDM requirements continuously — flagging gaps before audit cycles.</li></ul>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <h3 class="case-section-title"><span class="num">03</span> Architecture</h3>
+    <ul class="case-list case-list-arch"><li>Frontend: React (web), React Native (patient/doctor apps)</li><li>Backend: Node.js + GraphQL gateway, Postgres for transactional, MongoDB for clinical notes</li><li>FHIR-compliant data layer, HL7 message bus (RabbitMQ)</li><li>Hosting: Private cloud on AWS Mumbai · HIPAA-aligned VPC isolation</li><li>AI: Symptom-driven differential diagnosis (Knowledge Agent), drug interaction alerts, no-show predictor</li></ul>
+  </div>
+
+  <div class="case-impact">
+    <div class="case-impact-label">Business Impact</div>
+    <div class="case-impact-grid">
+        <div class="impact-metric">
+          <div class="impact-num serif">10X</div>
+          <div class="impact-label">Operational Efficiency</div>
+          <div class="impact-desc">Cross-facility patient handoff time</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">5X</div>
+          <div class="impact-label">Care Coordination</div>
+          <div class="impact-desc">Inter-department referral velocity</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">3X</div>
+          <div class="impact-label">Faster Reporting</div>
+          <div class="impact-desc">Monthly compliance pack generation</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">40%</div>
+          <div class="impact-label">Record Retrieval</div>
+          <div class="impact-desc">Reduction in time-to-access patient history</div>
+        </div></div>
+  </div>
+
+  <div class="case-tech">
+    <div class="case-tech-label">Technology Used</div>
+    <div class="case-tech-chips"><span class="tech-chip">React</span><span class="tech-chip">React Native</span><span class="tech-chip">Node.js</span><span class="tech-chip">GraphQL</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">MongoDB</span><span class="tech-chip">RabbitMQ</span><span class="tech-chip">FHIR</span><span class="tech-chip">HL7</span><span class="tech-chip">AWS Mumbai</span><span class="tech-chip">OpenAI</span></div>
+  </div>
+
+  <blockquote class="case-quote">
+    <div class="case-quote-mark serif">"</div>
+    <p class="case-quote-text">Audit readiness used to be a quarterly panic. Now it's a dashboard. The clinical teams trust the data, which is the highest compliment software can get in this industry.</p>
+    <footer class="case-quote-footer">— Chief Medical Information Officer · Multi-Specialty Hospital Chain</footer>
+  </blockquote>
+
+  <div class="case-cta">
+    <a class="btn btn-secondary btn-arrow" href="contact.html">Discuss a similar engagement </a>
+  </div>
+</article>
+
+<article class="case-study reveal" id="agritech-marketplace-africa">
+  <div class="case-study-header">
+    <div class="case-tag" style="background: var(--gold); color: var(--ink);">AgriTech · East Africa</div>
+    <div class="case-num serif">03</div>
+    <h2 class="case-title">Farmer Marketplace & Traceability Platform for 8,000+ Smallholders</h2>
+    <p class="case-lede">Built an end-to-end marketplace connecting 8,000+ smallholder farmers in Kenya and Tanzania to bulk buyers, with crop-level traceability and carbon tracking baked in.</p>
+    <div class="case-client">
+      <div class="case-client-label">Client</div>
+      <div class="case-client-name">East African Agri Cooperative</div>
+      <div class="case-client-desc">Multi-country agri cooperative federating 8,000+ smallholder farmers across Kenya and Tanzania. Anonymous per NDA.</div>
+    </div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">01</span> The Problem</h3>
+      <ul class="case-list"><li>Smallholder farmers were selling crops at farmgate prices to local aggregators, capturing only 20-30% of the eventual buyer price. The value chain bled their margin.</li><li>Bulk buyers (food processors, exporters, supermarket chains) couldn't reliably source from smallholders — no traceability, no quality grading, no aggregation logistics.</li><li>EU and US buyers were demanding carbon-footprint data for sourcing decisions. The cooperative had no way to capture or report this.</li><li>Existing FPO software was Western-built, English-only, and assumed always-on connectivity that didn't match rural East African reality.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">02</span> The Solution</h3>
+      <ul class="case-list case-list-solution"><li>Deployed Infooware's <strong>Agrosphere Smart Agriculture Platform</strong> + custom marketplace layer with Swahili and English UI, offline-first mobile architecture.</li><li>GIS-mapped 8,000+ farm plots. Crop intelligence module advised planting and harvest windows by location. Traceability captured every batch from sowing to dispatch.</li><li>Built carbon tracking module — soil carbon, fertilizer use, transport emissions — generating buyer-ready reports.</li><li>Aggregation logistics layer coordinates pickup from farms, quality grading at hubs, and dispatch to buyers. Payments flow back to farmers via M-Pesa.</li></ul>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <h3 class="case-section-title"><span class="num">03</span> Architecture</h3>
+    <ul class="case-list case-list-arch"><li>Mobile: Flutter (offline-first, Swahili + English), works on entry-level Android</li><li>Backend: GraphQL + Node.js on Google Cloud Africa region</li><li>GIS: PostGIS + Mapbox · Satellite imagery via Sentinel-2</li><li>Payments: M-Pesa Daraja API, Flutterwave for cross-border</li><li>AI: Yield forecasting (per-farm), pest/disease early warning (image classification)</li></ul>
+  </div>
+
+  <div class="case-impact">
+    <div class="case-impact-label">Business Impact</div>
+    <div class="case-impact-grid">
+        <div class="impact-metric">
+          <div class="impact-num serif">3X</div>
+          <div class="impact-label">Farmer Income Lift</div>
+          <div class="impact-desc">Average across 8,000+ participating farmers</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">8,000+</div>
+          <div class="impact-label">Farmers Onboarded</div>
+          <div class="impact-desc">Across Kenya and Tanzania</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">9 months</div>
+          <div class="impact-label">Two-Country Rollout</div>
+          <div class="impact-desc">From kickoff to second-country go-live</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">100%</div>
+          <div class="impact-label">Traceability Coverage</div>
+          <div class="impact-desc">Every batch tracked sowing-to-dispatch</div>
+        </div></div>
+  </div>
+
+  <div class="case-tech">
+    <div class="case-tech-label">Technology Used</div>
+    <div class="case-tech-chips"><span class="tech-chip">Flutter</span><span class="tech-chip">Node.js</span><span class="tech-chip">GraphQL</span><span class="tech-chip">PostGIS</span><span class="tech-chip">Mapbox</span><span class="tech-chip">GCP Africa</span><span class="tech-chip">M-Pesa Daraja</span><span class="tech-chip">Sentinel-2</span><span class="tech-chip">TensorFlow</span></div>
+  </div>
+
+  <blockquote class="case-quote">
+    <div class="case-quote-mark serif">"</div>
+    <p class="case-quote-text">We've finally given our farmers the same tools that big agribusinesses have. The price difference shows up in their bank accounts every harvest cycle.</p>
+    <footer class="case-quote-footer">— Executive Director · East African Agri Cooperative</footer>
+  </blockquote>
+
+  <div class="case-cta">
+    <a class="btn btn-secondary btn-arrow" href="contact.html">Discuss a similar engagement </a>
+  </div>
+</article>
+
+<article class="case-study reveal" id="manufacturing-audit-multinational">
+  <div class="case-study-header">
+    <div class="case-tag" style="background: var(--teal); color: var(--cream-light);">Manufacturing · Multi-Country</div>
+    <div class="case-num serif">04</div>
+    <h2 class="case-title">Digital Inspection Platform Replacing Paper Audits Across 47 Sites</h2>
+    <p class="case-lede">Replaced paper-based safety, quality and compliance audits across 47 manufacturing sites in 6 countries with a unified inspection platform — and shaved audit cycle time by 75%.</p>
+    <div class="case-client">
+      <div class="case-client-label">Client</div>
+      <div class="case-client-name">Industrial Manufacturing Group</div>
+      <div class="case-client-desc">Multi-country industrial group operating 47 production facilities across India, Vietnam, Thailand, Mexico, Poland and Brazil. Anonymous per NDA.</div>
+    </div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">01</span> The Problem</h3>
+      <ul class="case-list"><li>Quality, safety and compliance audits were 100% paper-based across 47 sites. Each site had its own checklists, scoring rubrics and reporting cadences.</li><li>Auditors were re-keying the same data into 3 different systems: site QA tool, central compliance system, and the regulator-facing portal.</li><li>Findings took 11-14 days to surface to corporate leadership. Corrective actions had no closed-loop tracking — half went unverified.</li><li>Annual external audits required teams to physically reconstruct trails from disparate paper records. Two near-misses with regulators in the past three years.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">02</span> The Solution</h3>
+      <ul class="case-list case-list-solution"><li>Deployed Infooware's <strong>TrackSure Smart Inspection & Certification</strong> platform with <strong>Audit & Compliance Mobile App</strong> for on-site auditors.</li><li>Standardized 200+ inspection checklists across 47 sites with country-specific compliance overlays. Auditors capture findings on tablet/phone, photos timestamped and geotagged.</li><li>Corrective Action workflows close the loop automatically — assigned, tracked, verified, signed off with full audit trail.</li><li>Compliance dashboards roll up by site, country, region and global — surfacing trends, recurring failures, high-risk facilities.</li></ul>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <h3 class="case-section-title"><span class="num">03</span> Architecture</h3>
+    <ul class="case-list case-list-arch"><li>Mobile: React Native (offline-first, multi-language)</li><li>Backend: .NET Core microservices on Azure (regional deployment for data residency)</li><li>Document management: Azure Blob with WORM compliance</li><li>Reporting: PowerBI embedded · Custom regulator-facing report templates</li><li>AI: Audit Copilot suggests next-question logic, flags inconsistent answers, drafts CAPA tickets</li></ul>
+  </div>
+
+  <div class="case-impact">
+    <div class="case-impact-label">Business Impact</div>
+    <div class="case-impact-grid">
+        <div class="impact-metric">
+          <div class="impact-num serif">75%</div>
+          <div class="impact-label">Faster Audit Cycle</div>
+          <div class="impact-desc">From 14-day reporting lag to 2-3 days</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">5X</div>
+          <div class="impact-label">Inspections Throughput</div>
+          <div class="impact-desc">Per auditor, per quarter</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">3X</div>
+          <div class="impact-label">Compliance Coverage</div>
+          <div class="impact-desc">Sites audited per cycle, same headcount</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">100%</div>
+          <div class="impact-label">CAPA Closure Rate</div>
+          <div class="impact-desc">Up from 52% pre-platform</div>
+        </div></div>
+  </div>
+
+  <div class="case-tech">
+    <div class="case-tech-label">Technology Used</div>
+    <div class="case-tech-chips"><span class="tech-chip">.NET Core</span><span class="tech-chip">React Native</span><span class="tech-chip">Azure</span><span class="tech-chip">PowerBI</span><span class="tech-chip">Azure Blob WORM</span><span class="tech-chip">OpenAI</span><span class="tech-chip">Azure AD</span><span class="tech-chip">SAP integration</span></div>
+  </div>
+
+  <blockquote class="case-quote">
+    <div class="case-quote-mark serif">"</div>
+    <p class="case-quote-text">We retired 47 different paper systems. Our regulators now ask us how we do it. The Audit Copilot has materially changed how our QA function operates.</p>
+    <footer class="case-quote-footer">— VP Global Quality & Compliance · Industrial Manufacturing Group</footer>
+  </blockquote>
+
+  <div class="case-cta">
+    <a class="btn btn-secondary btn-arrow" href="contact.html">Discuss a similar engagement </a>
+  </div>
+</article>
+
+<article class="case-study reveal" id="education-multicampus-india">
+  <div class="case-study-header">
+    <div class="case-tag" style="background: var(--gold); color: var(--ink);">Education · India</div>
+    <div class="case-num serif">05</div>
+    <h2 class="case-title">Role-Based ERP for a Multi-Campus Education Group</h2>
+    <p class="case-lede">Unified 7 campuses, 32,000 students, 1,800 staff and tens of thousands of parents onto a single role-based platform — with AI-powered learning paths and auto-evaluation built in.</p>
+    <div class="case-client">
+      <div class="case-client-label">Client</div>
+      <div class="case-client-name">Multi-Campus Education Group</div>
+      <div class="case-client-desc">K-12 + higher education group operating 7 campuses across western India. Anonymous per NDA.</div>
+    </div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">01</span> The Problem</h3>
+      <ul class="case-list"><li>Each of the 7 campuses ran its own SIS, LMS, fee management and parent communication tools — 28+ disconnected systems in total.</li><li>Parents received SMS, email, WhatsApp and printed letters from different systems. Important academic notifications were missed routinely.</li><li>Examination evaluation was a manual marathon. Teachers spent weekends grading. Result publication lagged 3-4 weeks after exams.</li><li>Fee collection had a 13% leakage. No central visibility on who paid, who was due, who needed follow-up.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">02</span> The Solution</h3>
+      <ul class="case-list case-list-solution"><li>Deployed Infooware's <strong>EduCloud ERP</strong> with role-based dashboards (Admin / Teacher / Student / Parent) plus the <strong>AI Learning Platform</strong> for personalized learning paths.</li><li>Migrated 32,000 student records, 1,800 staff records, and 5 years of academic history. Parallel-ran with legacy systems for one academic term to validate.</li><li>AI auto-evaluation handles MCQ, short-answer and even structured long-form responses. Teacher review time on assessments dropped 70%.</li><li>Single parent app replaces fragmented communications. Attendance, fee status, academic progress, exam results — all in one place.</li></ul>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <h3 class="case-section-title"><span class="num">03</span> Architecture</h3>
+    <ul class="case-list case-list-arch"><li>Frontend: Next.js (web), React Native (mobile)</li><li>Backend: Node.js + tRPC, Postgres, Redis for session state</li><li>AI: GPT-4 for evaluation, custom RAG for subject-specific knowledge</li><li>Payments: Razorpay integration · Auto-reconciliation against fee schedules</li><li>Notifications: WhatsApp Business + SMS + email, unified preferences per parent</li></ul>
+  </div>
+
+  <div class="case-impact">
+    <div class="case-impact-label">Business Impact</div>
+    <div class="case-impact-grid">
+        <div class="impact-metric">
+          <div class="impact-num serif">5X</div>
+          <div class="impact-label">Operational Efficiency</div>
+          <div class="impact-desc">Admin overhead per 1,000 students</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">3X</div>
+          <div class="impact-label">Communication Throughput</div>
+          <div class="impact-desc">Parent-school touchpoints per term</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">70%</div>
+          <div class="impact-label">Teacher Time Saved</div>
+          <div class="impact-desc">On assessment evaluation</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">13% → 1.2%</div>
+          <div class="impact-label">Fee Leakage</div>
+          <div class="impact-desc">After 6 months of running</div>
+        </div></div>
+  </div>
+
+  <div class="case-tech">
+    <div class="case-tech-label">Technology Used</div>
+    <div class="case-tech-chips"><span class="tech-chip">Next.js</span><span class="tech-chip">React Native</span><span class="tech-chip">Node.js</span><span class="tech-chip">tRPC</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">Redis</span><span class="tech-chip">GPT-4</span><span class="tech-chip">Razorpay</span><span class="tech-chip">WhatsApp Business API</span></div>
+  </div>
+
+  <blockquote class="case-quote">
+    <div class="case-quote-mark serif">"</div>
+    <p class="case-quote-text">The platform didn't just digitize what we had. It changed how our principals run their campuses. Decisions that took a fortnight now happen in a meeting.</p>
+    <footer class="case-quote-footer">— Group CEO · Multi-Campus Education Group</footer>
+  </blockquote>
+
+  <div class="case-cta">
+    <a class="btn btn-secondary btn-arrow" href="contact.html">Discuss a similar engagement </a>
+  </div>
+</article>
+
+<article class="case-study reveal" id="hospitality-boutique-chain">
+  <div class="case-study-header">
+    <div class="case-tag" style="background: var(--teal); color: var(--cream-light);">Hospitality · India + Southeast Asia</div>
+    <div class="case-num serif">06</div>
+    <h2 class="case-title">AI-Powered Operations for a Boutique Hotel Chain</h2>
+    <p class="case-lede">Centralized booking, dynamic pricing, housekeeping and POS for a 23-property boutique hotel chain across 4 countries — and grew occupancy 2X without growing room inventory.</p>
+    <div class="case-client">
+      <div class="case-client-label">Client</div>
+      <div class="case-client-name">Boutique Hotel Group</div>
+      <div class="case-client-desc">Boutique hospitality group operating 23 properties across India, Sri Lanka, Vietnam and Indonesia. Anonymous per NDA.</div>
+    </div>
+  </div>
+
+  <div class="case-grid">
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">01</span> The Problem</h3>
+      <ul class="case-list"><li>Properties used different PMS vendors. The group had no real-time visibility into occupancy, RevPAR or housekeeping status across the portfolio.</li><li>Pricing was set monthly by property managers. Dynamic demand swings (festivals, conferences, weather events) were missed — leaving revenue on the table.</li><li>Guest preferences captured at one property didn't follow to others. A guest's repeat visit started cold every time.</li><li>F&B, spa and front-desk POS were siloed. End-of-day reconciliation across systems was a 90-minute manual exercise per property.</li></ul>
+    </div>
+
+    <div class="case-section">
+      <h3 class="case-section-title"><span class="num">02</span> The Solution</h3>
+      <ul class="case-list case-list-solution"><li>Deployed <strong>Hotelligence — AI-Powered Hotel Ops</strong> across all 23 properties, with central dashboard and per-property operational views.</li><li>Dynamic pricing engine ingests competitor rates, local event calendars, historical demand patterns and current pipeline — recommends rate adjustments daily.</li><li>Guest CRM follows the guest across properties. Stay preferences, F&B history, allergies, anniversary dates — all surfaced at check-in.</li><li>Unified POS for front-desk, F&B, spa and ancillary services. End-of-day close went from 90 minutes to under 10.</li></ul>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <h3 class="case-section-title"><span class="num">03</span> Architecture</h3>
+    <ul class="case-list case-list-arch"><li>Frontend: React (operations dashboards), React Native (housekeeping tablets)</li><li>Backend: Node.js + GraphQL, multi-tenant Postgres</li><li>AI Pricing: Custom forecasting model + LLM rationale generator</li><li>Integrations: Booking.com, Expedia, Agoda channel manager · Stripe + local PSPs</li><li>PMS: Built-in, with optional Opera / Cloudbeds bridge for legacy properties</li></ul>
+  </div>
+
+  <div class="case-impact">
+    <div class="case-impact-label">Business Impact</div>
+    <div class="case-impact-grid">
+        <div class="impact-metric">
+          <div class="impact-num serif">2X</div>
+          <div class="impact-label">Occupancy Growth</div>
+          <div class="impact-desc">Portfolio-wide, in 18 months</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">4X</div>
+          <div class="impact-label">Operational Efficiency</div>
+          <div class="impact-desc">Manager hours saved per property/week</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">3X</div>
+          <div class="impact-label">Direct Bookings</div>
+          <div class="impact-desc">Via guest CRM-driven repeat marketing</div>
+        </div>
+        <div class="impact-metric">
+          <div class="impact-num serif">10 min</div>
+          <div class="impact-label">End-of-Day Close</div>
+          <div class="impact-desc">Down from 90 minutes</div>
+        </div></div>
+  </div>
+
+  <div class="case-tech">
+    <div class="case-tech-label">Technology Used</div>
+    <div class="case-tech-chips"><span class="tech-chip">React</span><span class="tech-chip">React Native</span><span class="tech-chip">Node.js</span><span class="tech-chip">GraphQL</span><span class="tech-chip">PostgreSQL</span><span class="tech-chip">OpenAI</span><span class="tech-chip">Stripe</span><span class="tech-chip">Booking.com Channel Manager</span><span class="tech-chip">TensorFlow</span></div>
+  </div>
+
+  <blockquote class="case-quote">
+    <div class="case-quote-mark serif">"</div>
+    <p class="case-quote-text">We're a boutique brand. We can't compete with chains on inventory. Hotelligence lets us compete on intelligence — knowing our guests better than the big chains know theirs.</p>
+    <footer class="case-quote-footer">— Founder & CEO · Boutique Hotel Group</footer>
+  </blockquote>
+
+  <div class="case-cta">
+    <a class="btn btn-secondary btn-arrow" href="contact.html">Discuss a similar engagement </a>
+  </div>
+</article>
+
+    </div>
+  </section>
+</main>
+
+<section class="cta-strip">
+  <div class="cta-inner">
+    <div class="cta-eyebrow reveal">Your Engagement</div>
+    <h2 class="cta-title reveal">Got a problem that <em>looks like</em> one of these?</h2>
+    <p class="cta-sub reveal">Odds are we've shipped something close. A 30-minute discovery call is enough to find out.</p>
+    <div class="btn-group reveal" style="justify-content: center;">
+      <a class="btn btn-primary" href="contact.html">Book Discovery Call</a>
+      <a class="btn btn-secondary" href="services.html">Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// Industry filter (client-side)
+document.querySelectorAll('.filter-chip').forEach(chip => {
+  chip.addEventListener('click', (e) => {
+    e.preventDefault();
+    const filter = chip.dataset.filter;
+    const isActive = chip.classList.contains('active');
+    document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('.case-study').forEach(cs => {
+      const tag = cs.querySelector('.case-tag').textContent.toLowerCase();
+      if (isActive) {
+        cs.style.display = 'block';
+      } else {
+        cs.style.display = tag.includes(filter) ? 'block' : 'none';
+      }
+    });
+    if (!isActive) chip.classList.add('active');
+  });
+});
+</script>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand-block">
+        <div class="logo-row">
+          <img src="assets/logo.png" alt="Infooware">
+          <span>Infooware</span>
+        </div>
+        <p>Engineering digital products, AI systems and enterprise platforms that scale businesses globally. 15+ years of building software that transforms industries.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <ul>
+          <li><a href="services.html#product-engineering">Product Engineering</a></li>
+          <li><a href="services.html#mobile">Mobile App Development</a></li>
+          <li><a href="services.html#ai">AI &amp; Agentic Systems</a></li>
+          <li><a href="services.html#cloud">Cloud &amp; DevOps</a></li>
+          <li><a href="services.html#enterprise">Enterprise Applications</a></li>
+          <li><a href="services.html#team">Team Augmentation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Industries</h5>
+        <ul>
+          <li><a href="industries.html#agriculture">Agriculture</a></li>
+          <li><a href="industries.html#fmcg">FMCG &amp; Distribution</a></li>
+          <li><a href="industries.html#healthcare">Healthcare</a></li>
+          <li><a href="industries.html#retail">Retail &amp; E-commerce</a></li>
+          <li><a href="industries.html#education">Education</a></li>
+          <li><a href="industries.html#logistics">Logistics</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="methodology.html">Methodology</a></li>
+          <li><a href="methodology.html#engagement">Engagement Models</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:hemant@infooware.com">hemant@infooware.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© Infooware · 15+ years turning technology into growth outcomes</div>
+      <div>Ahmedabad, India · United States · <a href="mailto:hemant@infooware.com">hemant@infooware.com</a></div>
+    </div>
+  </div>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
